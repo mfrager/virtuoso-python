@@ -325,7 +325,7 @@ class Virtuoso(Store):
             if splitpoint == 0:
                 q = u'BASE <%s>\n%s' % (base, q)
 
-        if queryGraph is not None and queryGraph is not '__UNION__':
+        if queryGraph is not None and queryGraph != '__UNION__':
             if isinstance(queryGraph, BNode):
                 queryGraph = _bnode_to_nodeid(queryGraph)
             qgn3 = queryGraph.n3()
