@@ -21,7 +21,7 @@ from sqlalchemy.sql.functions import GenericFunction
 from sqlalchemy.types import (
     CHAR, VARCHAR, TIME, NCHAR, NVARCHAR, DATETIME, FLOAT, String, NUMERIC,
     INTEGER, SMALLINT, VARBINARY, DECIMAL, TIMESTAMP, UnicodeText, REAL,
-    Unicode, Text, Float, Binary, UserDefinedType, TypeDecorator)
+    Unicode, Text, Float, LargeBinary, UserDefinedType, TypeDecorator)
 from sqlalchemy.orm import column_property
 from sqlalchemy.ext.compiler import compiles
 from sqlalchemy.ext.hybrid import hybrid_property
@@ -258,7 +258,7 @@ class DOUBLEPRECISION(Float):
     __visit_name__ = 'DOUBLE PRECISION'
 
 
-class LONGVARBINARY(Binary):
+class LONGVARBINARY(LargeBinary):
     __visit_name__ = 'LONG VARBINARY'
 
 
