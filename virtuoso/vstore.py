@@ -235,9 +235,9 @@ class Virtuoso(Store):
             connection.setencoding(str, 'utf-8')
         else:
             connection.setdecoding(pyodbc.SQL_CHAR, 'utf-8', pyodbc.SQL_CHAR)
-            connection.setdecoding(pyodbc.SQL_WCHAR, 'utf-16', pyodbc.SQL_WCHAR)
-            connection.setdecoding(pyodbc.SQL_WMETADATA, 'utf-16', pyodbc.SQL_WCHAR)
-            connection.setencoding('utf-16', pyodbc.SQL_WCHAR)
+            connection.setdecoding(pyodbc.SQL_WCHAR, 'utf-32LE', pyodbc.SQL_WCHAR)
+            connection.setdecoding(pyodbc.SQL_WMETADATA, 'utf-32LE', pyodbc.SQL_WCHAR)
+            connection.setencoding('utf-32LE', pyodbc.SQL_WCHAR)
             connection.setencoding('utf-8', pyodbc.SQL_CHAR)
         self.__init_ns_decls__()
 
